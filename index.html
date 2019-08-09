@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+          content="Simple web app combining Web Bluetooth and Tone.js to produce tones based on live BLE sensor data.">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="jumbotron my-4">
+        <h1> webble-tone </h1>
+        <p class="lead"> Simple web app combining Web Bluetooth and Tone.js to produce tones based on live BLE sensor data. </p>
+        <hr>
+        <p> Currently features the ability to select and play two tones simultaneously, as well as to pair with Bluetooth devices in range.  At present there is NO interpretation of Bluetooth sensor data into a tone &mdash; this is to be developed next... </p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-6">
+          <h1> First Tone </h1>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <button class="btn btn-primary" type="button"
+                      id="firstToneButton"> Play </button>
+            </div>
+            <input type="number" class="form-control" id="firstToneHz"
+                   value="262">
+            <div class="input-group-append">
+              <span class="input-group-text">Hz</span>
+            </div>
+          </div>
+          <button class="btn btn-secondary" type="button"
+                  id="firstDeviceButton"> Pair </button>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <h1> Second Tone </h1>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <button class="btn btn-primary" type="button"
+                      id="secondToneButton"> Play </button>
+            </div>
+            <input type="number" class="form-control" id="secondToneHz"
+                   value="330">
+            <div class="input-group-append">
+              <span class="input-group-text">Hz</span>
+            </div>
+          </div>
+          <button class="btn btn-secondary" type="button"
+                  id="secondDeviceButton"> Pair </button>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-4">
+    <footer class="footer text-center">
+      <a href="https://github.com/jeffyactive/webble-tone"> webble-tone </a>
+    </footer>
+    <script src="js/Tone.js"></script>
+    <script src="js/webble-tone.js"></script>
+  </body>
+</html>
